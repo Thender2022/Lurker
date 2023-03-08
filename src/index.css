@@ -17,6 +17,29 @@ img {
   width: 250px;
 }
 
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main {
+  margin: 1rem;
+}
+
+.product {
+  border: 1px #404040 solid;
+  margin: 1rem;
+}
+
+.product img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
 /* CSS Custom Properties
 :root {
   --white: #FFFFFF;
