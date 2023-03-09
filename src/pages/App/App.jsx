@@ -7,6 +7,8 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar'
 import HomePage from '../HomePage/HomePage'
+import ArtPage from '../ArtPage/ArtPage'
+import ProductPage from '../ProductPage/ProductPage'
 import data from '../../data';
 
 
@@ -25,22 +27,12 @@ export default function App() {
         <main>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path="/product/:slug" element={<ProductPage />} />
             <Route path="/" element={<HomePage />} />
+            <Route path="/ArtPage/ArtPage" element={<ArtPage />} />
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
           </Routes>
-          <h1>Art Work</h1>
-          <div className="products">
-            {data.products.map(product => (
-              <div className="product" key={product.slug}>
-                <img src={product.image} alt={product.name} />
-                <div class="product-info">
-                  <p>{product.name}</p>
-                  <p>{product.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </main>
         </>
         :
