@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Link, Routes, Route } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
 import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
@@ -18,18 +18,18 @@ export default function App() {
 
   return (
     <div className="App">
+        <header>
+          <Link to="/">Lurker</Link>
+        </header>
       {
         user ?
         <>
-        <header>
-          <a href="/">Lurker</a>
-        </header>
         <main>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path="/ArtPage/ArtPage" element={<ArtPage />} />
             <Route path="/product/:slug" element={<ProductPage />} />
             <Route path="/" element={<HomePage />} />
-            <Route path="/ArtPage/ArtPage" element={<ArtPage />} />
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
           </Routes>

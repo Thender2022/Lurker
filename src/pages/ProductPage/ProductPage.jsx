@@ -7,8 +7,7 @@ export default function ProductPage() {
 
     return (
         <div>
-            <h1>Product Page</h1>
-            <h2>{slug}</h2>
+            <h1>{slug}</h1>
         </div>
     )
 }

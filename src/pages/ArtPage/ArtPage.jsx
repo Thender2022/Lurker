@@ -1,7 +1,11 @@
 
+import { useEffect } from 'react';
 import data from '../../data'
 
 export default function ArtPage() {
+
+    
+
     return (
         <div>
           <h2>Lurk Wurk</h2>

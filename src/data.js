@@ -2,7 +2,7 @@ const data = {
     products: [
         {
             name: 'Abstract',
-            slug: 'abstract',
+            slug: 'Abstract',
             category: 'Paintings',
             image: '/images/abstract.jpg',
             price: 500,
@@ -12,7 +12,7 @@ const data = {
         },
         {
             name: 'Hurt',
-            slug: 'hurt',
+            slug: 'Hurt',
             category: 'Paintings',
             image: '/images/Hurt.jpg',
             price: 500,
@@ -22,7 +22,7 @@ const data = {
         },
         {
             name: 'Purp',
-            slug: 'purp',
+            slug: 'Purp',
             category: 'Paintings',
             image: '/images/purp.jpg',
             price: 500,
@@ -32,7 +32,7 @@ const data = {
         },
         {
             name: 'Peyote',
-            slug: 'peyote',
+            slug: 'Peyote',
             category: 'Paintings',
             image: '/images/peyote.jpg',
             price: 500,
@@ -42,7 +42,7 @@ const data = {
         },
         {
             name: 'Saved',
-            slug: 'saved',
+            slug: 'Saved',
             category: 'Paintings',
             image: '/images/saved.jpg',
             price: 500,
@@ -52,7 +52,7 @@ const data = {
         },
         {
             name: 'Smithers',
-            slug: 'smithers',
+            slug: 'Smithers',
             category: 'Paintings',
             image: '/images/smithers.jpg',
             price: 500,
