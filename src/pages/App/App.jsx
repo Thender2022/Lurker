@@ -18,13 +18,13 @@ export default function App() {
 
   return (
     <div className="App">
-        <header>
-          <Link to="/">Lurker</Link>
-        </header>
       {
         user ?
         <>
         <main>
+        <header>
+          <Link to="/">Lurker</Link>
+        </header>
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/ArtPage/ArtPage" element={<ArtPage />} />
