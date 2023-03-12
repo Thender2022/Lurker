@@ -1,9 +1,22 @@
-const data = {
-    products: [
+require('dotenv').config();
+require('./config/database');
+
+const Category = require('./models/category');
+const Item = require('./models/item');
+
+(async function() {
+    await Category.deleteMany({});
+    const categories = await Category.create([
+        {name: 'Canvas', sortOrder: 10},
+        { name: 'Mural', sortOrder: 20}
+    ])
+    
+    await Item.deleteMany({});
+    const items = await Item.create([
         {
             name: 'Abstract',
             slug: 'Abstract',
-            category: 'Canvas',
+            category: categories[0],
             image: '/images/abstract.jpg',
             price: 500,
             countInStock: 1,
@@ -12,7 +25,7 @@ const data = {
         {
             name: 'Hurt',
             slug: 'Hurt',
-            category: 'Canvas',
+            category: categories[0],
             image: '/images/Hurt.jpg',
             price: 500,
             countInStock: 1,
@@ -21,7 +34,7 @@ const data = {
         {
             name: 'Purp',
             slug: 'Purp',
-            category: 'Canvas',
+            category: categories[0],
             image: '/images/purp.jpg',
             price: 500,
             countInStock: 1,
@@ -30,7 +43,7 @@ const data = {
         {
             name: 'Peyote',
             slug: 'Peyote',
-            category: 'Canvas',
+            category: categories[0],
             image: '/images/peyote.jpg',
             price: 500,
             countInStock: 1,
@@ -39,7 +52,7 @@ const data = {
         {
             name: 'Saved',
             slug: 'Saved',
-            category: 'Canvas',
+            category: categories[0],
             image: '/images/saved.jpg',
             price: 500,
             countInStock: 1,
@@ -48,13 +61,16 @@ const data = {
         {
             name: 'Smithers',
             slug: 'Smithers',
-            category: 'Canvas',
+            category: categories[0],
             image: '/images/smithers.jpg',
             price: 500,
             countInStock: 1,
             description: 'High quality art'
-        },
-    ]
-}
-
-export default data;
+        }
+    ]);
+    
+    console.log(items)
+    
+    process.exit()
+    
+})();

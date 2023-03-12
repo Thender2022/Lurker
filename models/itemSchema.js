@@ -1,16 +1,17 @@
 const Schema = require('mongoose').Schema;
 
 const itemSchema = new Schema({
-    name: { type: String, required: true },
-    slug: { type: String, required: true },
-    image: { type: String, }
-})
+    name: {type: String, required: true },
+    slug: {type: String, required: true },
+    category: {type: Schema.Types.ObjectId, ref: 'Category'},
+    image: {type: String, required: true },
+    price: {type: Number, required: true },
+    countInStock: {type: Number },
+    brand: {type: String },
 
-// name: 'Abstract',
-//             slug: 'Abstract',
-//             category: 'Paintings',
-//             image: '/images/abstract.jpg',
-//             price: 500,
-//             countInStock: 1,
-//             brand: 'Lurker',
-//             description: 'High quality art'
+}, {
+    timestamps: true
+});
+
+module.exports = itemSchema;
+
