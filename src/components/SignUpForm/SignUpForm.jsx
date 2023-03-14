@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { signUp } from '../../utilities/users-service'
+import { addUserCart } from '../../utilities/userCart-api'
 
 export default class SignUpForm extends Component {
   state = {
@@ -27,6 +28,8 @@ export default class SignUpForm extends Component {
         }
         const user = await signUp(formData)
         this.props.setUser(user)
+        await addUserCart()
+        
       } catch {
         this.setState({ error: 'Sign Up Failed - Try Again' })
       }
