@@ -53,7 +53,7 @@ export default function App() {
         <>
         <main>
         <header>
-          <Link to="/">ART LURKER</Link>
+          <Link to="/ArtPage/ArtPage">ART LURKER</Link>
         </header>
           <NavBar user={user} setUser={setUser} />
           <Routes>
