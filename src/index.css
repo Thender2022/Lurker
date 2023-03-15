@@ -1,8 +1,6 @@
-/* body {
-  margin: 0;
-} */
 
 header {
+  display: flex;
   background-color:antiquewhite;
   padding: 1rem;
   font-weight: bold;

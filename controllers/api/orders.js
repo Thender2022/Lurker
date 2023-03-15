@@ -33,5 +33,6 @@ async function checkout(req, res) {
   const cart = await Order.getCart(req.user._id);
   cart.isPaid = true;
   await cart.save();
-  res.json(cart);
+  const newCart = await Order.getCart(req.user._id);
+  res.json(newCart);
 }

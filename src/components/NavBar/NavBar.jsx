@@ -16,8 +16,8 @@ export default function NavBar({ user, setUser }) {
             &nbsp; | &nbsp;
             <Link to="/orders">Order History</Link>
             &nbsp; | &nbsp;
-            <Link to="/orders/new">New Order</Link>
-            <button>Check-Out</button>
+            
+            <Link to="/checkout">Check Out</Link>
             &nbsp;&nbsp; <div className="welcome">Welcome, {user.name}</div>
             &nbsp;&nbsp;<Link to=""onClick={handleLogOut}>Log Out</Link>
         </nav>
