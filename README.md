@@ -4,35 +4,33 @@
 
 <p>This website was created with the desire to be a selling platform for a local artist to display and promote his artwork while connecting with his audience.</p>
 
-<h3>Technologies Used</h3>
-    <ol>
+<h3>Mern-Stack application with the following:</h3>
+    <ul>
         <li>MongoDb/Mongoose</li>
         <li>Express</li>
         <li>React</li>
         <li>Node</li>
-    </ol>
+    </ul>
 
 <img src="/img/screen.png">
 
 <h4>Links to the site and planning material:</h4>
-    <ol>
+    <ul>
         <li>https://lurker-website.herokuapp.com/</li>
-        <li>localhost:3000</li>
         <li>https://trello.com/invite/b/K7PjlyXN/ATTI2b2d7008ea6c9a926af0c201543e69153C72E658/project-4</li>
-    </ol>
+    </ul>
 
 <h4>Unsolved Problems</h4>
-    <ol>
+    <ul>
         <li>Styling</li>
         <li>Understanding the flow</li>
         <li>Some functionality</li>
-    </ol>
+    </ul>
     
 <h4>Future Enhancements</h4>
-    <ol>
+    <ul>
         <li>Calculated Total</li>
         <li>Styling</li>
         <li>Booking Services</li>
-    </ol>
+    </ul>
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
