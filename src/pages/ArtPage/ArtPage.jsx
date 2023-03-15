@@ -14,7 +14,7 @@ export default function ArtPage({handleAddToCart, cart, removeFromCart}) {
 
     return (
         <div>
-          <h2>Lurk Wurk</h2>
+          
           <div className="products">
             {items.map(product => (
               <div className="product" key={product.slug}>

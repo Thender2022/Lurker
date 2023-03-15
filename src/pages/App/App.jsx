@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link, Routes, Route, useNavigate } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
 import AuthPage from '../AuthPage/AuthPage';
-// import NewOrderPage from '../NewOrderPage/NewOrderPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
+
 import NavBar from '../../components/NavBar/NavBar'
 import HomePage from '../HomePage/HomePage'
 import ArtPage from '../ArtPage/ArtPage'
@@ -54,7 +53,7 @@ export default function App() {
         <>
         <main>
         <header>
-          <Link to="/">LURKER</Link>
+          <Link to="/">ART LURKER</Link>
         </header>
           <NavBar user={user} setUser={setUser} />
           <Routes>
