@@ -12,7 +12,7 @@
         <li>Node</li>
     </ol>
 
-<p><img src="/img/screen.png"></p>
+<img src="/img/screen.png">
 
 <h4>Links to the site and planning material:</h4>
     <ol>
