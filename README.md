@@ -14,20 +14,20 @@
 
 <img src="/img/screen.png">
 
-<h4>Links to the site and planning material:</h4>
+<h3>Links to the site and planning material:</h3>
     <ul>
         <li>https://lurker-website.herokuapp.com/</li>
         <li>https://trello.com/invite/b/K7PjlyXN/ATTI2b2d7008ea6c9a926af0c201543e69153C72E658/project-4</li>
     </ul>
 
-<h4>Unsolved Problems</h4>
+<h3>Unsolved Problems</h3>
     <ul>
         <li>Styling</li>
         <li>Understanding the flow</li>
         <li>Some functionality</li>
     </ul>
     
-<h4>Future Enhancements</h4>
+<h3>Future Enhancements</h3>
     <ul>
         <li>Calculated Total</li>
         <li>Styling</li>
