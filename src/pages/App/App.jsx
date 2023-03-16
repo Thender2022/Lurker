@@ -3,18 +3,19 @@ import { useState, useEffect } from 'react'
 import { Link, Routes, Route, useNavigate } from 'react-router-dom'
 import { getUser } from '../../utilities/users-service'
 import AuthPage from '../AuthPage/AuthPage';
-
 import NavBar from '../../components/NavBar/NavBar'
 import HomePage from '../HomePage/HomePage'
 import ArtPage from '../ArtPage/ArtPage'
 import ProductPage from '../ProductPage/ProductPage'
 import * as ordersAPI from '../../utilities/orders-api'
 import CheckOutPage from '../CheckOutPage/CheckOutPage';
+import { getUserCart } from '../../utilities/userCart-api';
 
 
 
 export default function App() {
   const [ user, setUser ] = useState(getUser())
+  const [ userCart, setUserCart ] = useState(getUser())
   const [cart, setCart] = useState(null)
   const navigate = useNavigate()
 
@@ -23,8 +24,13 @@ export default function App() {
       const cart = await ordersAPI.getCart()
       setCart(cart) 
     }
+    async function fetchUserCart() {
+      const userCart = await getUserCart()
+      setUserCart(userCart)
+    }
     if(user) {
       getCart()
+      fetchUserCart()
     } else {
       setCart(null)
     }
@@ -61,7 +67,7 @@ export default function App() {
             <Route path="/product/:slug" element={<ProductPage />} />
             <Route path="/" element={<HomePage />} />
             
-            <Route path="/checkout" element={<CheckOutPage checkOut={checkOut} cart={cart} removeFromCart={removeFromCart} />} />
+            <Route path="/checkout" element={<CheckOutPage checkOut={checkOut} user={user} cart={cart} removeFromCart={removeFromCart} />} />
           </Routes>
         </main>
         </>

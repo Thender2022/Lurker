@@ -1,7 +1,8 @@
 const UserCart = require('../../models/userCart');
 
 module.exports = {
-  create
+  create,
+  index
 };
 
 // A cart is the unpaid order for a user
@@ -12,3 +13,11 @@ async function create(req, res) {
   res.json(cart);
 }
 
+async function index(req, res) {
+  try {
+    const userCart = await UserCart.findOne({user: req.user})
+    res.json(userCart)
+  } catch (error) {
+    res.status(400).json(error)
+  }
+}

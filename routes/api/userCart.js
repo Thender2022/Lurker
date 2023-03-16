@@ -4,5 +4,6 @@ const userCartCtrl = require('../../controllers/api/userCart');
 
 // POST /api/orders/cart/items/:id
 router.post('/', userCartCtrl.create);
+router.get('/', userCartCtrl.index);
 
 module.exports = router;

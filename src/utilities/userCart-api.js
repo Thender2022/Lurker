@@ -7,4 +7,11 @@ export function addUserCart() {
   return sendRequest(`${BASE_URL}/userCart`, "POST", {});
 }
 
+export function addNote(noteData) {
+  return sendRequest(`${BASE_URL}/userCart`, "POST", {});
+}
+
+export function getUserCart() {
+  return sendRequest(`${BASE_URL}/userCart`, "GET");
+}
 

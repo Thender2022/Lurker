@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import CartNotesForm from "../../components/CartNotesForm/CartNotesForm"
 
-export default function CheckOutPage({ cart, checkOut, removeFromCart }) {
+export default function CheckOutPage({ cart, checkOut, removeFromCart, user }) {
     return (
         <>
           <h1>CheckOutPage</h1>
