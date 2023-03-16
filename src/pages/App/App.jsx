@@ -17,7 +17,7 @@ export default function App() {
   const [ user, setUser ] = useState(getUser())
   const [ userCart, setUserCart ] = useState(getUser())
   const [cart, setCart] = useState(null)
-  const [userCartNotes, setUserCartNotes] = useState(null)
+  // const [userCartNotes, setUserCartNotes] = useState(null)
   const navigate = useNavigate()
 
   useEffect(function() {

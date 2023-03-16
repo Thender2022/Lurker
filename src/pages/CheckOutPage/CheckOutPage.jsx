@@ -1,11 +1,15 @@
 import {Link} from "react-router-dom"
 import CartNotesForm from "../../components/CartNotesForm/CartNotesForm"
+import NoteCard from "../../components/NoteCard/NoteCard"
 
 export default function CheckOutPage({ cart, checkOut, removeFromCart, user, userCart }) {
     return (
         <>
           <h1>CheckOutPage</h1>
           <CartNotesForm userCart={userCart} />
+          {userCart.cartNotes.map((note, idx) => (
+          <NoteCard note={note} key={idx} />
+          ))}
           <div className="products">
             {cart.lineItems.map(product => (
               <div className="product" key={product.item.slug}>
