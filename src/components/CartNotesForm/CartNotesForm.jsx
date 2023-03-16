@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { addNote } from "../../utilities/userCart-api"
 
-export default function CartNotesForm() {
+export default function CartNotesForm({userCart}) {
     const [newNote, setNewNote] = useState({
         content: '',
         budget: 0
@@ -14,9 +15,9 @@ export default function CartNotesForm() {
         setNewNote(newNoteForm)
     }
 
-    function handleSubmit(evt) {
+    async function handleSubmit(evt) {
         evt.preventDefault();
-        
+        const submitNote = await addNote(newNote, userCart._id)
     }
 
     return (

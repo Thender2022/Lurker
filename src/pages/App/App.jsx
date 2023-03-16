@@ -17,6 +17,7 @@ export default function App() {
   const [ user, setUser ] = useState(getUser())
   const [ userCart, setUserCart ] = useState(getUser())
   const [cart, setCart] = useState(null)
+  const [userCartNotes, setUserCartNotes] = useState(null)
   const navigate = useNavigate()
 
   useEffect(function() {
@@ -64,10 +65,10 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/ArtPage/ArtPage" element={<ArtPage handleAddToCart={handleAddToCart} removeFromCart={removeFromCart} cart={cart} />} />
-            <Route path="/product/:slug" element={<ProductPage />} />
+            {/* <Route path="/product/:slug" element={<ProductPage />} /> */}
             <Route path="/" element={<HomePage />} />
             
-            <Route path="/checkout" element={<CheckOutPage checkOut={checkOut} user={user} cart={cart} removeFromCart={removeFromCart} />} />
+            <Route path="/checkout" element={<CheckOutPage checkOut={checkOut} user={user} cart={cart} userCart={userCart} removeFromCart={removeFromCart} />} />
           </Routes>
         </main>
         </>

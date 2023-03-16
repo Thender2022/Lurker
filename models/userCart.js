@@ -22,7 +22,7 @@ const cartNotesSchema = new Schema({
 const userCartSchema = new Schema({
   artPieces: { type: Array, default: [] },
   user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  cartNotesSchema: [cartNotesSchema]
+  cartNotes: [cartNotesSchema]
 }, {
   timestamps: true,
 });
