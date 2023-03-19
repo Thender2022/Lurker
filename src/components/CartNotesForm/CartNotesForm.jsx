@@ -18,6 +18,10 @@ export default function CartNotesForm({userCart}) {
     async function handleSubmit(evt) {
         evt.preventDefault();
         const submitNote = await addNote(newNote, userCart._id)
+        setNewNote({
+            content: '',
+            budget: 0
+        })
     }
 
     return (

@@ -10,8 +10,12 @@ export function addUserCart() {
 export function addNote(noteData, userCartId) {
   return sendRequest(`${BASE_URL}/${userCartId}/userCartNotes`, "POST", noteData);
 }
+export function deleteNote(userCartId, noteId) {
+  // return sendRequest(`${BASE_URL}/${userCartId}/userCartNotes/${noteId}`, "DELETE", noteData);
+}
 
 export function getUserCart() {
   return sendRequest(`${BASE_URL}`, "GET");
 }
+
 

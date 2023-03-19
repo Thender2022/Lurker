@@ -6,7 +6,6 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar'
 import HomePage from '../HomePage/HomePage'
 import ArtPage from '../ArtPage/ArtPage'
-import ProductPage from '../ProductPage/ProductPage'
 import * as ordersAPI from '../../utilities/orders-api'
 import CheckOutPage from '../CheckOutPage/CheckOutPage';
 import { getUserCart } from '../../utilities/userCart-api';
@@ -60,13 +59,13 @@ export default function App() {
         <>
         <main>
         <header>
-          <Link to="/ArtPage/ArtPage">ART LURKER</Link>
+          <Link to="/">ART LURKER</Link>
         </header>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route path="/ArtPage/ArtPage" element={<ArtPage handleAddToCart={handleAddToCart} removeFromCart={removeFromCart} cart={cart} />} />
             {/* <Route path="/product/:slug" element={<ProductPage />} /> */}
-            <Route path="/" element={<HomePage />} />
             
             <Route path="/checkout" element={<CheckOutPage checkOut={checkOut} user={user} cart={cart} userCart={userCart} removeFromCart={removeFromCart} />} />
           </Routes>

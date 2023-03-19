@@ -1,15 +1,22 @@
-
+body {
+  margin: 0;
+  background-color: rgb(161,196,193);
+}
 
 header {
   display: flex;
-  background-color:antiquewhite;
+  background-color:rgb(3, 3, 2);
+  height: 20px;
+  width: 100%;
   padding: 1rem;
   font-weight: bold;
   text-align: left;
+  
 }
 
-header a{
-  color: black
+header a {
+  color: rgb(161, 196, 193);
+  
 }
 
 img {
@@ -17,14 +24,19 @@ img {
   width: 250px;
 }
 
+.fro {
+  height:600px ;
+  width: 500px;
+}
+
+
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-main {
-  margin: 1rem;
-}
+
 
 .product {
   border: 1px #404040 solid;
